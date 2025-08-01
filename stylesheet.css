@@ -1,0 +1,545 @@
+/* Reset */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Base Styles */
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: 'Xanh Mono';
+  background-image: url(assets/3.png);
+  background-size: cover;
+}
+
+svg {
+  width: 570px;
+  max-width: 570px;
+  opacity: 1;
+  margin-left: 6.1em;
+  margin-top: 1.4em;
+  animation: 10000ms spin infinite;
+  animation-fill-mode: backwards;
+  position: absolute;
+  z-index: 1;
+}
+
+text {
+  word-spacing: 122px;
+  fill: #522222;
+  font-family: 'Xanh Mono';
+  text-shadow: white;
+}
+
+/* Elements */
+.two {
+  position: absolute;
+  bottom: -40px;
+  left: 0px;
+  right: 2px;
+  width: 100%;
+  z-index:2;
+}
+
+.plush {
+  position: absolute;
+  top: 54%;
+  left: 84.7%;
+  z-index: 2;
+  width: 10%;
+  height: 40%;
+}
+
+.plush img {
+  width: 100px;
+}
+
+.plush:not(:hover) {
+  transform: rotate(4deg);
+  animation: 3500ms booty infinite;
+  filter: blur(0.7px);
+}
+
+.plush:hover {
+  transform: rotate(4.2deg);
+  filter: blur(1px);
+  transition: 1s;
+}
+
+.sonikit-patch {
+  position: absolute;
+  top: 34%;
+  left: 14.7%;
+  z-index: 2;
+  width: 10%;
+  height: 40%;
+  transform: rotate(1.2deg);
+}
+
+.filth {
+  position: absolute;
+  top: 25%;
+  left: 61.7%;
+  z-index: 1;
+  width: 45%;
+  height: 73%;
+  opacity: 58%;
+}
+
+.comingsoon {
+  position: absolute;
+  top: 45%;
+  left: 71%;
+  z-index: 2;
+  width: 13.35%;
+  height: 52.52%;
+}
+
+.comingsoon img {
+  width: 100px;
+}
+
+.comingsoon:not(:hover) {
+  transform: rotate(1deg);
+  animation: 3500ms booty infinite;
+  filter: blur(0.7px);
+}
+
+.comingsoon:hover {
+  transform: rotate(0.2deg);
+  filter: blur(1px);
+  transition: 1s;
+}
+
+.mediass,
+.releases,
+.network {
+  position: absolute;
+  top: 31%;
+  z-index: 2;
+  height: 8.9%;
+}
+
+.mediass {
+  margin-left: 16.5em;
+  transform: rotate(1.5deg);
+}
+
+.releases {
+  margin-left: 17.3em;
+  transform: rotate(0.9deg);
+}
+
+.network {
+  margin-left: 10.5em;
+  transform: rotate(0.2deg);
+}
+
+.what {
+  position: absolute;
+  top: 30.5%;
+  left: 62%;
+  z-index: 2;
+  width: 40%;
+  height: 10%;
+  transform: rotate(1.5deg);
+}
+
+.para {
+  position: absolute;
+  top: 39%;
+  left: 60.5%;
+  z-index: 2;
+  width: 9.5%;
+  height: 10%;
+}
+
+.para:not(:hover) {
+  animation: 1700ms shake infinite;
+  transition: 1s;
+  filter: drop-shadow(0px 0px 0px #C50B9);
+}
+
+.item1, .item2, .item3, .item4 {
+  -webkit-text-stroke-width: 10px;
+  -webkit-text-stroke-color: white;
+}
+
+textPath:hover,
+a.item1:hover,
+a.item2:hover,
+a.item3:hover,
+a.item4:hover {
+  filter: saturate(1.4);
+  transition: filter 0.3s ease;
+}
+
+.item3 {
+  stroke: white;
+  stroke-width: 0.02px;
+  stroke-opacity: 50%;
+}
+
+/* Keyframes */
+@keyframes shake {
+  5%, 15%, 25%, 35%, 55%, 65%, 75%, 95% {
+    filter: blur(0.4px);
+    transform: translateY(0.1px) rotate(0deg);
+  }
+  10%, 30%, 40%, 50%, 70%, 80%, 90% {
+    filter: blur(0px);
+    transform: translateY(0) rotate(0deg);
+  }
+  20%, 60% {
+    filter: blur(0px);
+    transform: translate(0, 0.2px) rotate(0deg);
+  }
+  45%, 85% {
+    filter: blur(0px);
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+  100% {
+    filter: blur(0px);
+    transform: translate(0) rotate(-0.2deg);
+  }
+}
+
+@keyframes booty {
+  5%, 15%, 25%, 35%, 55%, 65%, 75%, 95% {
+    filter: blur(0.5px);
+    transform: translateY(0px) rotate(1deg);
+  }
+  10%, 30%, 40%, 50%, 70%, 80%, 90% {
+    filter: blur(0px);
+    transform: translateY(0px) rotate(1deg);
+  }
+  20%, 60% {
+    filter: blur(0px);
+    transform: translate(0px, 0px) rotate(1.2deg);
+  }
+  45%, 85% {
+    filter: blur(0px);
+    transform: translate(0px, 0px) rotate(1deg);
+  }
+  100% {
+    filter: blur(0px);
+    transform: translate(0) rotate(1.2deg);
+  }
+}
+
+@keyframes spin {
+  0% { transform: rotate(-1.25deg); }
+  25% { transform: rotate(1.25deg); }
+  50% { transform: rotate(-1.25deg); }
+  75% { transform: rotate(1.25deg); }
+  100% { transform: rotate(-2.5deg); }
+}
+
+@keyframes infinite-spinning {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Chat & Text Box */
+.chat-container {
+  width: 20.3em;
+  height: 26em;
+  background-image: url('assets/chatbot.png');
+  background-size: cover;
+  background-position: top center;
+  border-radius: 5px;
+  padding: 10px;
+  margin-left: 51.8em;
+  margin-top: 32.5em;
+  z-index: 2;
+  transform: rotate(-0.5deg);
+}
+
+.chat-box {
+  height: 21em;
+  overflow-y: auto;
+  border: 1px solid #cccccc;
+  padding: 5px;
+  margin-bottom: 0.2em;
+  margin-top: 1.6em;
+}
+
+#user-input {
+  width: calc(100% - 50px);
+  padding: 5px;
+  border: 1px solid #c9c9c9;
+  border-radius: 3px;
+  font-family: 'Xanh Mono';
+  font-size: 15px;
+  background-color: rgb(226, 224, 215);
+}
+
+button {
+  width: 40px;
+  height: 31px;
+  border: none;
+  background-color: #4b3737;
+  color: rgb(228, 221, 199);
+  border-radius: 3px;
+  cursor: pointer;
+  font-family: 'Xanh Mono';
+}
+
+.text-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  max-width: 46em;
+  max-height: 48.5em;
+  overflow: hidden;
+  top: 27%;
+  left: 59%;
+  background-image: url('assets/boxx3.png');
+  background-size: cover;
+  background-position: top center;
+}
+
+.text-container p {
+  margin-top: 10.2em;
+  margin-left: 3.8em;
+  max-width: 39em;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #7c7a7a;
+  text-indent: 9.2em;
+}
+
+.push-forward {
+  position: relative;
+  left: 9.3em;
+}
+
+.box1 {
+  width: 21.47em;
+  height: 21.47rem;
+  margin: 5rem auto;
+  transform: rotate(0deg);
+  position: absolute;
+  margin-left: 6.05em;
+  opacity: 1;
+  margin-bottom: 3.8em;
+
+  animation: infinite-spinning 390s linear infinite;
+}
+
+.box1 img {
+  max-width: 100%;
+}
+
+/* WRAPPER for SVG and rotating circle */
+.orbit-wrapper {
+  position: absolute;  /* neutral positioning */
+  width: auto;
+  margin-left: -27.5em;
+  margin-top: 16em;
+  display: block;    /* default block */
+  z-index: auto;
+      aspect-ratio: 1 / 1;
+}
+
+
+
+.orbit-wrapper svg {
+
+      aspect-ratio: 1 / 1;
+}
+
+/* Mobile Responsive Styles */
+@media only screen and (max-width: 600px) {
+  html, body {
+    overflow: auto;
+    height: auto;
+    display: block;
+  }
+
+
+
+
+  svg {
+    position: absolute;
+    top: -22em;
+    left: -6.1em;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    max-width: 100%;
+  }
+
+  .chat-container {
+    width: 90%;
+    margin: 2em auto;
+    transform: none;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .chat-box {
+    height: 200px;
+    font-size: 14px;
+  }
+
+  #user-input {
+    width: 100%;
+    margin-top: 0.5em;
+    font-size: 14px;
+  }
+
+  button {
+    width: 100%;
+    margin-top: 0.5em;
+  }
+
+  .box1 {
+    width: 60%;
+    height: auto;
+    margin: 2em auto;
+    position: absolute;
+    left: 20%;
+    margin-top: 16.5%;
+  }
+
+
+  .image-container img,
+  .plush,
+  .filth,
+  .what,
+  .para,
+  .comingsoon,
+  .mediass,
+  .releases,
+  .network {
+    position: relative !important;
+    width: 80% !important;
+    height: auto !important;
+    margin: 1em auto;
+    left: 0 !important;
+    top: 0 !important;
+    transform: none !important;
+  }
+
+  .text-container {
+    position: relative;
+    width: 90%;
+    max-width: none;
+    height: auto;
+    margin: 2em auto;
+    top: 0;
+    left: 0;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .text-container p {
+    margin: 2em auto;
+    text-indent: 0;
+    margin-left: 0;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .push-forward {
+    left: 0;
+    display: block;
+    margin-top: 0.5em;
+  }
+
+  .sonikit-patch {
+    position: relative !important;
+    display: block;
+    margin: 1em auto 1.5em auto;
+    margin-top: 95%; !important;
+    left: 0; !important;
+    transform: none; !important;
+    width: 90%;
+    max-width: 350px;
+    z-index: 999;
+  }
+
+  /* Make SVG and box1 stay together inside wrapper */
+  .orbit-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin: 2em auto;
+        aspect-ratio: 1 / 1;
+  }
+
+.two {
+  display: block;
+  position: absolute;
+  top: -25%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  margin: 0 auto;
+  z-index: 2.5; /* Between svg (z-index: 3) and .box1 (z-index: 2) */
+  left: -12%;
+object-fit: cover; 
+}
+
+  
+  .orbit-wrapper svg,
+  .orbit-wrapper .box1 {
+    width: 100%;
+    max-width: 400px;
+    margin: 0;
+    
+    position: absolute !important;
+    transform: none !important;
+    animation: none !important;
+    display: block;
+        aspect-ratio: 1 / 1;
+  }
+
+
+
+svg {
+    width: 100%;
+    height: auto;
+    margin: 2em auto;
+    position: absolute;
+    left: 0%;
+    top: -6.5%;
+}
+  
+
+  .orbit-wrapper .box1 img {
+    width: 100%;
+    height: auto;
+    display: block;
+        aspect-ratio: 1 / 1;
+  }
+}
+
+
+
+
+/* Additional stacking */
+svg {
+  z-index: 3;
+}
+
+.box1 {
+  z-index: 2;
+}
+
